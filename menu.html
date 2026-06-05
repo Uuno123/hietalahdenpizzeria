@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Bebas+Neue&family=DM+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="menu.css">
+    <script src="products.js"></script>
+    <script src="menu.js" defer></script>
+    <title>Menu — Hietalahdenpizzeria</title>
+</head>
+<body>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="toggle-menu" id="toggleMenu">
+        <nav class="navbar2">
+            <a href="index.html">Etusivu</a>
+            <a href="menu.html">Menu</a>
+            <a href="#">Tilaa nyt</a>
+            <a class="different" href="#">044 9302665</a>
+        </nav>
+    </div>
+
+    <nav class="navbar">
+        <div class="navbar-left">
+            <i id="hamburger" class="fa-solid fa-bars hamburger"></i>
+        </div>
+        <img src="logoh.jpg" class="logo">
+        <div class="desktop-nav">
+            <a href="index.html">Etusivu</a>
+            <a href="menu.html">Menu</a>
+            <a href="index.html#yhteystiedot">Yhteystiedot</a>
+        </div>
+        <div class="navbar-right">
+            <a href="ostoskori.html" class="cart-wrap">
+                <i class="fa-solid fa-cart-shopping cart"></i>
+                <span class="cart-count" id="cartCount"></span>
+            </a>
+        </div>
+    </nav>
+
+   
+
+    <section class="menu-hero">
+        <p class="menu-label">Hietalahdenpizzeria</p>
+        <h1 class="menu-title">MEIDÄN MENU</h1>
+        <p class="menu-sub">Kaikki pizzat tehdään käsin tuoreista raaka-aineista. Tilaa paikan päältä tai kotiin.</p>
+    </section>
+
+    <div class="menu-wrapper" id="menuWrapper">
+
+        <div class="menu-category">
+            <h2 class="category-title">PIZZAT</h2>
+            <div class="menu-grid" id="grid-pizzat"></div>
+        </div>
+
+        <div class="menu-category">
+            <h2 class="category-title">SALAATIT</h2>
+            <p class="category-desc">Kaikkiin salaattiannoksiin sisältyy: jäävuorisalaatti, fetajuusto, oliivi, kurkku, tomaatti, sipuli, salaattikastike.</p>
+            <div class="menu-grid" id="grid-salaatit"></div>
+        </div>
+
+        <div class="menu-category">
+            <h2 class="category-title">GRILLIANNOKSET</h2>
+            <div class="menu-grid" id="grid-grilliannokset"></div>
+        </div>
+
+        <div class="menu-category">
+            <h2 class="category-title">KANA-ANNOKSET</h2>
+            <div class="menu-grid" id="grid-kana"></div>
+        </div>
+
+        <div class="menu-category">
+            <h2 class="category-title">RULLAT</h2>
+            <div class="menu-grid" id="grid-rullat"></div>
+        </div>
+
+    </div>
+
+    <footer class="footer" id="yhteystiedot">
+        <img src="logoh.jpg" class="footer-logo">
+        <p class="footer-name">Hietalahdenpizzeria</p>
+        <div class="footer-divider"></div>
+        <div class="footer-info">
+            <div class="footer-row">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Tiilitehtaankatu 46, 65100 Vaasa</span>
+            </div>
+            <div class="footer-row">
+                <i class="fa-solid fa-phone"></i>
+                <span>044 9302665</span>
+            </div>
+        </div>
+        <p class="footer-copy">© 2025 Hietalahdenpizzeria. Kaikki oikeudet pidätetään.</p>
+    </footer>
+
+    <!-- BOTTOM SHEET BACKDROP -->
+    <div class="sheet-overlay" id="sheetOverlay"></div>
+
+    <!-- BOTTOM SHEET -->
+    <div class="item-sheet" id="itemSheet">
+        <div class="sheet-handle"></div>
+        <button class="sheet-close" id="sheetClose"><i class="fa-solid fa-xmark"></i></button>
+        <div class="sheet-img-wrap">
+            <img class="sheet-img" id="sheetImg" src="" alt="">
+        </div>
+        <div class="sheet-body">
+            <p class="sheet-badge" id="sheetBadge"></p>
+            <h2 class="sheet-name" id="sheetName"></h2>
+            <p class="sheet-ingredients" id="sheetIngredients"></p>
+
+            <div class="sheet-size-section">
+                <p class="sheet-size-label">KOKO</p>
+                <div class="sheet-size-toggle">
+                    <button class="sheet-size-btn active" id="sizeNormal" data-size="normal">Normal</button>
+                    <button class="sheet-size-btn" id="sizePerhe" data-size="perhe">
+                        Perhepizza <span class="sheet-size-extra" id="sizeExtraLabel"></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="sheet-extras-section">
+                <p class="sheet-extras-title">LISÄTÄYTTEET <span class="sheet-extras-price-note" id="extraPriceNote"></span></p>
+                <div class="sheet-extras-list" id="sheetExtrasList"></div>
+                <label class="sheet-extra-item sheet-extra-gluten">
+                    <input type="checkbox" id="sheetGluten">
+                    <span class="extra-name">Gluteeniton pohja</span>
+                    <span class="extra-price">+2,00 €</span>
+                </label>
+            </div>
+
+            <div class="sheet-footer">
+                <div class="sheet-qty-ctrl">
+                    <button class="sheet-qty-btn" id="sheetMinus">−</button>
+                    <span class="sheet-qty-val" id="sheetQty">1</span>
+                    <button class="sheet-qty-btn" id="sheetPlus">+</button>
+                </div>
+                <button class="sheet-add-btn" id="sheetAddBtn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Lisää ostoskoriin</span>
+                    <span class="sheet-add-price" id="sheetAddPrice"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

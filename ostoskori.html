@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Bebas+Neue&family=DM+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="ostoskori.css">
+    <title>Ostoskori — Hietalahdenpizzeria</title>
+</head>
+<body>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="toggle-menu" id="toggleMenu">
+        <nav class="navbar2">
+            <a href="index.html">Etusivu</a>
+            <a href="menu.html">Menu</a>
+            <a href="menu.html">Tilaa nyt</a>
+            <a class="different" href="tel:0449302665">044 9302665</a>
+        </nav>
+    </div>
+
+    <nav class="navbar">
+        <div class="navbar-left">
+            <i id="hamburger" class="fa-solid fa-bars hamburger"></i>
+        </div>
+        <a href="index.html"><img src="logoh.jpg" class="logo" alt="logo"></a>
+        <div class="desktop-nav">
+            <a href="index.html">Etusivu</a>
+            <a href="menu.html">Menu</a>
+            <a href="index.html#yhteystiedot">Yhteystiedot</a>
+        </div>
+        <div class="navbar-right">
+            <a href="ostoskori.html" class="cart-wrap">
+                <i class="fa-solid fa-cart-shopping cart"></i>
+                <span class="cart-count" id="cartCount"></span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="cart-page">
+        <div class="cart-layout">
+
+            <!-- VASEN: tilaukset -->
+            <div class="cart-left">
+                <div class="cart-left-header">
+                    <h1 class="cart-title">TILAUKSESI</h1>
+                    <span class="cart-item-count" id="cartItemCount"></span>
+                </div>
+                <div class="cart-divider"></div>
+
+                <div id="cartItems" class="cart-items-list">
+                    <!-- rendered by JS -->
+                </div>
+
+                <!-- tyhjä tila -->
+                <div class="cart-empty" id="cartEmpty">
+                    <span class="cart-empty-icon">🍕</span>
+                    <p class="cart-empty-title">OSTOSKORI ON TYHJÄ</p>
+                    <p class="cart-empty-sub">Lisää pizzoja menuusta tai rakenna oma.</p>
+                    <div class="cart-empty-btns">
+                        <a href="menu.html" class="cart-empty-btn">KATSO MENU →</a>
+                        <a href="index.html#rakenna-pizza" class="cart-empty-btn-outline">RAKENNA OMA PIZZA</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OIKEA: yhteenveto + lomake -->
+            <div class="cart-right">
+                <div class="summary-card">
+                    <h2 class="summary-title">YHTEENVETO</h2>
+                    <div class="summary-divider"></div>
+
+                    <div class="summary-items" id="summaryItems"></div>
+
+                    <div class="summary-totals">
+                        <div class="summary-row">
+                            <span>Välisumma</span>
+                            <span id="summarySubtotal">0,00 €</span>
+                        </div>
+                        <div class="summary-row" id="deliveryFeeRow">
+                            <span>Toimitusmaksu</span>
+                            <span id="summaryDeliveryFee">0,00 €</span>
+                        </div>
+                        <div class="summary-divider"></div>
+                        <div class="summary-row summary-total-row">
+                            <span>YHTEENSÄ</span>
+                            <span class="summary-total-val" id="summaryTotal">0,00 €</span>
+                        </div>
+                    </div>
+
+                    <div class="summary-divider"></div>
+
+                    <div class="delivery-section">
+                        <p class="delivery-label">TOIMITUSTAPA</p>
+                        <div class="delivery-toggle">
+                            <button class="dtoggle-btn active" id="btnToimitus" data-mode="toimitus">
+                                <i class="fa-solid fa-motorcycle"></i> Toimitus
+                            </button>
+                            <button class="dtoggle-btn" id="btnNouto" data-mode="nouto">
+                                <i class="fa-solid fa-store"></i> Nouto
+                            </button>
+                        </div>
+                    </div>
+
+                    <form class="order-form" id="orderForm" novalidate>
+                        <input class="form-input" type="text"  id="fieldNimi"    name="nimi"    placeholder="Nimi *" required>
+                        <input class="form-input" type="tel"   id="fieldPuhelin" name="puhelin" placeholder="Puhelinnumero *" required>
+                        <input class="form-input" type="text" id="fieldOsoite" name="osoite" placeholder="Toimitusosoite *" required>
+                        <textarea class="form-input form-textarea" id="fieldLisatiedot" name="lisatiedot" placeholder="Lisätiedot (vapaaehtoineen)" rows="2"></textarea>
+
+                        <button type="submit" class="order-btn" id="orderBtn">
+                            SIIRRY MAKSAMAAN →
+                        </button>
+                        
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="ostoskori.js"></script>
+</body>
+</html>

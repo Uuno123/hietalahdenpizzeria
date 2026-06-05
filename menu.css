@@ -1,0 +1,934 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*==============================
+        ANIMATIONS
+===============================*/
+
+.animate {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* varmistaa että elementti on aina klikattavissa */
+    pointer-events: auto;
+}
+
+.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate:nth-child(2) { transition-delay: 0.1s; }
+.animate:nth-child(3) { transition-delay: 0.2s; }
+.animate:nth-child(4) { transition-delay: 0.3s; }
+
+/*==============================
+        BASE STYLES
+===============================*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*===============================
+    MENU HERO
+=================================*/
+
+.menu-hero {
+    background-image: linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.72)), url(pexels-maxavans-5056863.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 40px 20px 35px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.menu-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #e63946;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.menu-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4.5rem;
+    color: #ffffff;
+    line-height: 0.95;
+    margin-bottom: 14px;
+}
+
+.menu-sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.5;
+    max-width: 320px;
+}
+
+/*===============================
+    MENU WRAPPER
+=================================*/
+
+.category-desc {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.875rem;
+    color: #666666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    max-width: 500px;
+}
+
+.menu-wrapper {
+    background: #f8f6f2;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    flex: 1;
+}
+
+.category-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: #111111;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #e63946;
+    display: inline-block;
+}
+
+.menu-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/*===============================
+    PIZZA CARD
+=================================*/
+
+.pizza-img-wrap {
+    width: 150px;
+    height: 150px;
+    min-width: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f0ece6;
+}
+
+.pizza-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.rulla-img-wrap {
+    border-radius: 12px;
+}
+
+.pizza-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px 22px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+    position: relative;
+}
+
+.pizza-card.featured {
+    border: 2px solid #e63946;
+}
+
+.pizza-badge {
+    position: absolute;
+    top: -1px;
+    right: 16px;
+    background: #e63946;
+    color: #ffffff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 3px 10px;
+    border-radius: 0 0 8px 8px;
+}
+
+.pizza-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    color: #111111;
+    letter-spacing: 0.5px;
+}
+
+.pizza-ingredients {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.875rem;
+    color: #777777;
+    line-height: 1.4;
+    margin-top: 2px;
+}
+
+.pizza-info {
+    flex: 1;
+}
+
+.pizza-bottom {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.pizza-price {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.1rem;
+    color: #111111;
+}
+
+.add-btn {
+    width: 36px;
+    height: 36px;
+    background: #e63946;
+    border: none;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+}
+
+.add-btn:hover {
+    background: #c1121f;
+}
+
+/*===============================
+    FOOTER
+=================================*/
+
+.footer {
+    background: #0f0f0f;
+    width: 100%;
+    padding: 40px 20px 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin-bottom: 4px;
+}
+
+.footer-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.footer-divider {
+    width: 40px;
+    height: 3px;
+    background: #e63946;
+    border-radius: 2px;
+    margin: 10px 0;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.footer-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-row i {
+    color: #e63946;
+    font-size: 16px;
+    width: 18px;
+    text-align: center;
+}
+
+.footer-row span {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.75);
+}
+
+.footer-copy {
+    margin-top: 24px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.3);
+    text-align: center;
+}
+
+/*==============================
+        DESKTOP 769px+
+===============================*/
+
+@media (min-width: 769px) {
+
+    .toggle-menu,
+    .overlay,
+    .hamburger,
+    .viiva {
+        display: none;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .navbar {
+        position: static;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 60px;
+        background: #ffffff;
+        width: 100%;
+        border-bottom: 3px solid #e63946;
+    }
+
+    .logo {
+        margin-left: 75px;
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+    }
+
+    .desktop-nav {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        margin-left: 80px;
+    }
+
+    .desktop-nav a {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 1rem;
+        color: #111111;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    .desktop-nav a:hover {
+        color: #e63946;
+    }
+
+    .navbar-right {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+
+    .cart {
+        font-size: 28px;
+        color: #e63946;
+        cursor: pointer;
+    }
+
+    .menu-hero {
+        padding: 80px 100px;
+    }
+
+    .menu-title {
+        font-size: 7rem;
+    }
+
+    .menu-sub {
+        font-size: 1.1rem;
+        max-width: 520px;
+    }
+
+    .menu-wrapper {
+        padding: 60px 100px;
+        gap: 70px;
+    }
+
+    .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .category-title {
+        font-size: 2.5rem;
+    }
+
+    .pizza-card {
+        padding: 24px 24px 18px 24px;
+    }
+
+    .pizza-name {
+        font-size: 1.6rem;
+    }
+
+    .pizza-ingredients {
+        font-size: 0.95rem;
+    }
+
+    .pizza-price {
+        font-size: 1.2rem;
+    }
+
+    .add-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
+    }
+
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 60px 100px;
+    }
+
+    .footer-divider {
+        display: none;
+    }
+
+    .footer-info {
+        width: auto;
+    }
+
+    .footer-copy {
+        margin-top: 0;
+    }
+
+}
+
+/*==============================
+        LARGE SCREEN 1750px+
+===============================*/
+
+@media (min-width: 1750px) {
+
+    .navbar {
+        padding: 20px 160px;
+    }
+
+    .logo {
+        margin-left: 0;
+        width: 80px;
+        height: 80px;
+    }
+
+    .desktop-nav {
+        margin-left: 60px;
+        gap: 50px;
+    }
+
+    .desktop-nav a {
+        font-size: 1.1rem;
+    }
+
+    .cart {
+        font-size: 34px;
+    }
+
+    .menu-hero {
+        padding: 100px 160px;
+    }
+
+    .menu-title {
+        font-size: 9rem;
+    }
+
+    .menu-wrapper {
+        padding: 80px 160px;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+    }
+
+    .footer {
+        padding: 70px 160px;
+    }
+
+}
+
+/*==============================
+        MOBILE max 768px
+===============================*/
+
+@media (max-width: 768px) {
+
+    .desktop-nav {
+        display: none;
+    }
+
+    /*============================
+        TOGGLE-MENU
+    ==============================*/
+
+    .toggle-menu{
+        height: auto;
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        z-index: 101;
+        background: #ffffff;
+        transition: top 0.35s ease;
+    }
+
+    .toggle-menu.open{
+        top: 0px;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 100;
+    }
+
+    .overlay.open{
+        display: block;
+    }
+
+    /*===============================
+        NAVBAR2
+    =================================*/
+
+    .navbar2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar2 a{
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 1.3rem;
+        color: #111111;
+        text-decoration: none;
+        padding: 18px 28px;
+        border-bottom: 1px solid rgba(0,0,0,0.07);
+        transition: color 0.2s ease;
+    }
+
+    .navbar2 a:hover{
+        color: #e63946;
+    }
+
+    .navbar2 a.different{
+        background: #c1121f;
+        color: #ffffff;
+        border-bottom: none;
+        text-align: left;
+        padding: 18px 28px;
+    }
+
+    .navbar2 a.different:hover{
+        background: #a30f1a;
+        color: #ffffff;
+    }
+
+    /*==================
+        NAVBAR
+    ===================*/
+
+     
+
+    .navbar{
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+        background: #ffffff;
+        height: 85px;
+    }
+
+    .navbar-left{
+        position: absolute;
+        left: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-right{
+        position: absolute;
+        right: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+    }
+
+    .cart{
+        font-size: 30px;
+        color: #e63946;
+        cursor: pointer;
+    }
+
+    .hamburger{
+        font-size: 30px;
+        color: #e63946;
+        cursor: pointer;
+    }
+
+    .menu-hero {
+        height: 250px;
+        margin-top: 75px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px 30px 20px;
+    }
+
+    .footer-divider {
+        display: block;
+    }
+
+    .footer-copy {
+        margin-top: 24px;
+    }
+
+    .pizza-card {
+        padding: 14px 16px;
+        gap: 12px;
+    }
+
+    .pizza-img-wrap {
+        width: 90px;
+        height: 90px;
+        min-width: 90px;
+    }
+
+    .pizza-name {
+        font-size: 1.1rem;
+    }
+
+    .pizza-ingredients {
+        font-size: 0.8rem;
+    }
+
+    .pizza-price {
+        font-size: 0.95rem;
+    }
+
+    .add-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 13px;
+    }
+
+}
+
+/* ══════════════════════════════
+   CART BADGE
+══════════════════════════════ */
+.cart-wrap  { position: relative; text-decoration: none; color: inherit; }
+.cart-count {
+    position: absolute; top: -7px; right: -9px;
+    background: #e63946; color: #fff;
+    border-radius: 50%; width: 17px; height: 17px;
+    font-size: 0.65rem; font-weight: 700;
+    display: none; align-items: center; justify-content: center;
+    font-family: 'DM Sans', sans-serif;
+}
+.cart-count.visible { display: flex; }
+
+/* ══════════════════════════════
+   BOTTOM SHEET
+══════════════════════════════ */
+.sheet-overlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 200;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.28s ease;
+}
+.sheet-overlay.active { opacity: 1; pointer-events: all; }
+
+.item-sheet {
+    position: fixed;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    width: 100%; max-width: 520px;
+    background: #fff;
+    border-radius: 24px 24px 0 0;
+    pointer-events: none;
+    z-index: 201;
+    transition: transform 0.32s cubic-bezier(0.32, 0.72, 0, 1);
+    overflow: hidden;
+    max-height: 90vh;
+    display: flex; flex-direction: column;
+}
+.item-sheet.open { transform: translateX(-50%) translateY(0); pointer-events: auto; }
+
+.sheet-handle {
+    width: 40px; height: 4px;
+    background: #e0e0e0; border-radius: 2px;
+    margin: 12px auto 0;
+    flex-shrink: 0;
+}
+
+.sheet-close {
+    position: absolute; top: 12px; right: 16px;
+    width: 32px; height: 32px;
+    background: #f0f0f0; border: none; border-radius: 50%;
+    cursor: pointer; font-size: 1rem; color: #555;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.15s;
+    z-index: 1;
+}
+.sheet-close:hover { background: #e0e0e0; }
+
+.sheet-img-wrap {
+    width: 100%; height: 220px;
+    overflow: hidden; flex-shrink: 0;
+    margin-top: 8px;
+}
+.sheet-img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.sheet-body {
+    padding: 20px 22px 0;
+    overflow-y: auto;
+    flex: 1;
+    display: flex; flex-direction: column; gap: 6px;
+}
+
+.sheet-badge {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.72rem; font-weight: 700;
+    color: #e63946; letter-spacing: 1.5px;
+    text-transform: uppercase;
+    min-height: 16px;
+}
+
+.sheet-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem; color: #111;
+    letter-spacing: 0.04em; line-height: 1;
+}
+
+.sheet-ingredients {
+    font-size: 0.88rem; color: #888;
+    line-height: 1.5;
+    padding-bottom: 4px;
+}
+
+/* ── koko ── */
+.sheet-size-section {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 14px;
+    margin-bottom: 2px;
+}
+.sheet-size-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.12em;
+    color: #aaa;
+    margin-bottom: 8px;
+}
+.sheet-size-toggle {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+.sheet-size-btn {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1.5px solid #e8e8e8;
+    background: #fafafa;
+    color: #555;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: all 0.18s;
+    text-align: center;
+}
+.sheet-size-btn:hover  { border-color: #e63946; background: #fff5f5; color: #111; }
+.sheet-size-btn.active { border-color: #e63946; background: rgba(230,57,70,0.07); color: #111; }
+.sheet-size-extra      { color: #e63946; font-weight: 700; }
+
+/* ── extras ── */
+.sheet-extras-section {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.sheet-extras-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.1em;
+    color: #111;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+.sheet-extras-price-note {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    color: #aaa;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+.sheet-extra-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #f8f8f8;
+    cursor: pointer;
+    transition: background 0.12s;
+}
+.sheet-extra-item:last-child { border-bottom: none; }
+.sheet-extra-item input[type="checkbox"] {
+    width: 18px; height: 18px;
+    accent-color: #e63946;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.extra-name {
+    font-weight: bold;
+    flex: 1;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    color: #333;
+}
+.extra-price {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    color: #aaa;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.extra-price-free { color: #27ae60; }
+.sheet-extra-gluten {
+    margin-top: 6px;
+    padding-top: 10px;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: none;
+}
+
+.sheet-footer {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 0 28px;
+    margin-top: auto;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* Quantity */
+.sheet-qty-ctrl {
+    display: flex; align-items: center;
+    border: 1.5px solid #e8e8e8;
+    border-radius: 10px; overflow: hidden;
+    flex-shrink: 0;
+}
+.sheet-qty-btn {
+    width: 40px; height: 40px;
+    background: #f5f5f5; border: none;
+    cursor: pointer; font-size: 1.2rem; color: #333;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.15s;
+}
+.sheet-qty-btn:hover { background: #e8e8e8; }
+.sheet-qty-val {
+    width: 40px; height: 40px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem; font-weight: 700;
+    border-left: 1.5px solid #e8e8e8;
+    border-right: 1.5px solid #e8e8e8;
+    user-select: none; background: #fff;
+}
+
+/* Add button */
+.sheet-add-btn {
+    flex: 1;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    background: #e63946; color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.05rem; letter-spacing: 0.08em;
+    padding: 12px 16px;
+    border: none; border-radius: 10px; cursor: pointer;
+    transition: background 0.18s, transform 0.12s;
+    white-space: nowrap;
+}
+.sheet-add-btn:hover  { background: #c1121f; transform: translateY(-1px); }
+.sheet-add-btn.added  { background: #25D366; }
+.sheet-add-btn i      { font-size: 0.9rem; }
+.sheet-add-price      { opacity: 0.85; font-size: 0.95rem; }
+
+/* ── DESKTOP: sheet keskelle näyttöä ── */
+@media (min-width: 769px) {
+    .item-sheet {
+        bottom: auto;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-40%);
+        border-radius: 20px;
+        max-width: 480px;
+        max-height: 85vh;
+        opacity: 0;
+        transition: transform 0.28s cubic-bezier(0.32, 0.72, 0, 1),
+                    opacity 0.22s ease;
+    }
+    .item-sheet.open {
+        transform: translateX(-50%) translateY(-50%);
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .sheet-handle { display: none; }
+    .sheet-img-wrap { height: 260px; }
+}

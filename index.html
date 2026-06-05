@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Bebas+Neue&family=DM+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="products.js"></script>
+    <script src="index.js" defer></script>
+    <title>Hietalahdenpizzeria</title>
+</head>
+<body>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="toggle-menu" id="toggleMenu">
+        <nav class="navbar2">
+            <a href="index.html">Etusivu</a>
+            <a href="menu.html">Menu</a>
+            <a href="menu.html">Tilaa nyt</a>
+            <a class="different" href="#">044 9302665</a>
+        </nav>
+    </div>
+
+
+    <nav class="navbar">
+        <div class="navbar-left">
+            <i id="hamburger" class="fa-solid fa-bars hamburger"></i>
+        </div>
+        <img src="logoh.jpg" class="logo">
+        <div class="desktop-nav">
+            <a href="index.html">Etusivu</a>
+            <a href="menu.html">Menu</a>
+            <a href="#yhteystiedot">Yhteystiedot</a>
+        </div>
+        <div class="navbar-right">
+            <a href="ostoskori.html" class="cart-wrap" id="cartWrap">
+                <i class="fa-solid fa-cart-shopping cart"></i>
+                <span class="cart-count" id="cartCount"></span>
+            </a>
+        </div>
+    </nav>
+
+
+    <section class="section1">
+
+        <h1 class="hero1">PARAS <br>PIZZA <br>VAASASSA</h1>
+        <p class="hero2">Tuoreista raaka-aineista tehtyä pizzaa sydämessä Vaasaa — tilaa helposti ja nopeasti.</p>
+
+        <div class="btn-container">
+            <button class="btn1" onclick="window.location.href='menu.html'">Katso menu -></button>
+            <button class="btn2" onclick="window.location.href='menu.html'">Tilaa nyt</button>
+        </div>
+    </section>
+
+    <div class="marquee-wrapper">
+        <div class="marquee-track">
+            <span>🍕 PARAS PIZZA VAASASSA</span>
+            <span>•</span>
+            <span>TILAA NYT</span>
+            <span>•</span>
+            <span>TUOREET RAAKA-AINEET</span>
+            <span>•</span>
+            <span>KÄSINTEHDYT PIZZAT</span>
+            <span>•</span>
+            <span>🍕 PARAS PIZZA VAASASSA</span>
+            <span>•</span>
+            <span>TILAA NYT</span>
+            <span>•</span>
+            <span>TUOREET RAAKA-AINEET</span>
+            <span>•</span>
+            <span>KÄSINTEHDYT PIZZAT</span>
+            <span>•</span>
+            <span>🍕 PARAS PIZZA VAASASSA</span>
+            <span>•</span>
+            <span>TILAA NYT</span>
+            <span>•</span>
+            <span>TUOREET RAAKA-AINEET</span>
+            <span>•</span>
+            <span>KÄSINTEHDYT PIZZAT</span>
+            <span>•</span>
+            <span>🍕 PARAS PIZZA VAASASSA</span>
+            <span>•</span>
+            <span>TILAA NYT</span>
+            <span>•</span>
+            <span>TUOREET RAAKA-AINEET</span>
+            <span>•</span>
+            <span>KÄSINTEHDYT PIZZAT</span>
+            <span>•</span>
+            <span>🍕 PARAS PIZZA VAASASSA</span>
+            <span>•</span>
+            <span>TILAA NYT</span>
+            <span>•</span>
+            <span>TUOREET RAAKA-AINEET</span>
+            <span>•</span>
+            <span>KÄSINTEHDYT PIZZAT</span>
+            <span>•</span>
+            <span>🍕 PARAS PIZZA VAASASSA</span>
+            <span>•</span>
+            <span>TILAA NYT</span>
+            <span>•</span>
+            <span>TUOREET RAAKA-AINEET</span>
+            <span>•</span>
+            <span>KÄSINTEHDYT PIZZAT</span>
+            <span>•</span>
+        </div>
+    </div>
+
+
+    <section class="section2">
+        <div class="section2-top">
+            <div class="section2-text">
+                <p class="hero3 animate">MIKSI ME?</p>
+                <h2 class="hero4 animate">AITOA <br> VAASALAISTA</h2>
+                <p class="hero5 animate">Olemme paikallinen pizzeria Vaasan sydämessä. Jokainen pizza tehdään käsin tuoreista raaka-aineista — ei pakastettua, ei kompromisseja.</p>
+            </div>
+            <div class="section2-imgs" id="section2Imgs">
+                <div class="section2-img">
+                    <img src="https://imageproxy.wolt.com/assets/68f9db4ccd0321dabf32d784?w=600" alt="Hietalahti Special">
+                </div>
+            </div>
+        </div>
+
+        <div class="cards-container">
+            <div class="card animate">
+                <div class="card-icon"><i class="fa-solid fa-leaf"></i></div>
+                <h3 class="card-title">Tuoreet raaka-aineet</h3>
+                <p class="card-text">Käytämme vain tuoreita, laadukkaita aineksia — suoraan toimittajalta lautaselle.</p>
+            </div>
+            <div class="card animate">
+                <div class="card-icon"><i class="fa-solid fa-fire"></i></div>
+                <h3 class="card-title">Käsintehdyt pizzat</h3>
+                <p class="card-text">Jokainen taikina vaivataaan ja jokainen pizza kootaan käsin tilauksen mukaan.</p>
+            </div>
+            <div class="card animate">
+                <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
+                <h3 class="card-title">Nopea toimitus</h3>
+                <p class="card-text">Pizza perille alle 60 minuutissa — kuumana ja tuoreena suoraan ovellesi.</p>
+            </div>
+        </div>
+
+        <div class="b-card animate">
+            <h2 class="card-hero1">TILAA KOTIIN - 60 MINUUTISSA</h2>
+            <p class="card-hero2">Nopea toimitus suoraan ovellesi — joka päivä klo 11–22.</p>
+            <button class="card-btn" onclick="window.location.href='menu.html'">Katso menu -></button>
+        </div>
+    </section>
+
+    <section class="section-builder" id="rakenna-pizza">
+        <div class="sb-layout">
+
+            <!-- VASEN: otsikko -->
+            <div class="sb-left">
+                <p class="sb-label">UUSI OMINAISUUS</p>
+                <h2 class="sb-title">RAKENNA<br>OMA PIZZA</h2>
+                <p class="sb-sub">Valitse kastike, juusto ja täytteet — pizza piirtyy reaaliajassa.</p>
+            </div>
+
+            <!-- KESKI: pizza -->
+            <div class="sb-center">
+                <div class="sb-canvas-wrap">
+                    <canvas id="homeCanvas"></canvas>
+                </div>
+            </div>
+
+            <!-- TÄYTTEET -->
+            <div class="sb-ingredient-panel" id="homePanel"></div>
+
+            <!-- OIKEA: yhteenveto + ostoskori -->
+            <div class="sb-right">
+                <p class="sb-right-label">VALITSEMASI</p>
+                <div class="sb-chips" id="homeChips"></div>
+                <div class="sb-right-divider"></div>
+                <div class="sb-price-row">
+                    <span class="sb-price-label">HINTA</span>
+                    <span class="sb-price-val" id="homePrice">8,00 €</span>
+                </div>
+                <button class="sb-cart-btn" id="homeCartBtn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    LISÄÄ OSTOSKORIIN
+                </button>
+                <p class="sb-note">Tai soita: <a href="tel:0449302665">044 9302665</a></p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section-gallery">
+        <p class="gallery-label">HIETALAHDENPIZZERIA</p>
+        <h2 class="gallery-title">MEIDÄN PIZZOJA</h2>
+        <div class="gallery-strip">
+            <div class="gallery-strip-track">
+                <div class="strip-item"><img src="https://imageproxy.wolt.com/assets/68f9db4ccd0321dabf32d784?w=600" alt="Hietalahti Special"></div>
+                <div class="strip-item"><img src="https://imageproxy.wolt.com/assets/68f9db8acd0321dabf32d78e?w=600" alt="Hot Pizza"></div>
+                <div class="strip-item"><img src="https://imageproxy.wolt.com/assets/68f9da2fcd0321dabf32d724?w=600" alt="Mexicana"></div>
+                <div class="strip-item"><img src="https://imageproxy.wolt.com/assets/68f9db0152f5fcdd085a899f?w=600" alt="Kebabpizza"></div>
+                <div class="strip-item"><img src="https://imageproxy.wolt.com/assets/68f9da9952f5fcdd085a8989?w=600" alt="Alla Pollo"></div>
+                <div class="strip-item"><img src="https://imageproxy.wolt.com/assets/68f9da29cd0321dabf32d723?w=600" alt="Capricciosa"></div>
+                <div class="strip-item"><img src="https://imageproxy.wolt.com/assets/68f9db4ccd0321dabf32d784?w=600" alt="Hietalahti Special"></div>
+                <div class="strip-item"><img src="https://imageproxy.wolt.com/assets/68f9db8acd0321dabf32d78e?w=600" alt="Hot Pizza"></div>
+                <div class="strip-item"><img src="https://imageproxy.wolt.com/assets/68f9da2fcd0321dabf32d724?w=600" alt="Mexicana"></div>
+                <div class="strip-item"><img src="https://imageproxy.wolt.com/assets/68f9db0152f5fcdd085a899f?w=600" alt="Kebabpizza"></div>
+                <div class="strip-item"><img src="https://imageproxy.wolt.com/assets/68f9da9952f5fcdd085a8989?w=600" alt="Alla Pollo"></div>
+                <div class="strip-item"><img src="https://imageproxy.wolt.com/assets/68f9da29cd0321dabf32d723?w=600" alt="Capricciosa"></div>
+                <div class="strip-item"><img src="https://imageproxy.wolt.com/assets/68f9db4ccd0321dabf32d784?w=600" alt="Hietalahti Special"></div>
+                <div class="strip-item"><img src="https://imageproxy.wolt.com/assets/68f9db8acd0321dabf32d78e?w=600" alt="Hot Pizza"></div>
+                <div class="strip-item"><img src="https://imageproxy.wolt.com/assets/68f9da2fcd0321dabf32d724?w=600" alt="Mexicana"></div>
+                <div class="strip-item"><img src="https://imageproxy.wolt.com/assets/68f9db0152f5fcdd085a899f?w=600" alt="Kebabpizza"></div>
+                <div class="strip-item"><img src="https://imageproxy.wolt.com/assets/68f9da9952f5fcdd085a8989?w=600" alt="Alla Pollo"></div>
+                <div class="strip-item"><img src="https://imageproxy.wolt.com/assets/68f9da29cd0321dabf32d723?w=600" alt="Capricciosa"></div>
+                <div class="strip-item"><img src="https://imageproxy.wolt.com/assets/68f9db4ccd0321dabf32d784?w=600" alt="Hietalahti Special"></div>
+                <div class="strip-item"><img src="https://imageproxy.wolt.com/assets/68f9db8acd0321dabf32d78e?w=600" alt="Hot Pizza"></div>
+                <div class="strip-item"><img src="https://imageproxy.wolt.com/assets/68f9da2fcd0321dabf32d724?w=600" alt="Mexicana"></div>
+                <div class="strip-item"><img src="https://imageproxy.wolt.com/assets/68f9db0152f5fcdd085a899f?w=600" alt="Kebabpizza"></div>
+                <div class="strip-item"><img src="https://imageproxy.wolt.com/assets/68f9da9952f5fcdd085a8989?w=600" alt="Alla Pollo"></div>
+                <div class="strip-item"><img src="https://imageproxy.wolt.com/assets/68f9da29cd0321dabf32d723?w=600" alt="Capricciosa"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-stats">
+        <div class="stat-item animate">
+            <span class="stat-number">1000+</span>
+            <span class="stat-label">Tyytyväistä asiakasta</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item animate">
+            <span class="stat-number">4.8★</span>
+            <span class="stat-label">Keskiarvo arvosteluissa</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item animate">
+            <span class="stat-number">60 min</span>
+            <span class="stat-label">Toimitus ovellesi</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item animate">
+            <span class="stat-number">20+</span>
+            <span class="stat-label">Erilaista pizzaa</span>
+        </div>
+    </section>
+
+    <section class="section3">
+        <p class="reviews-label">ASIAKKAAT SANOVAT</p>
+        <h2 class="reviews-title">ARVOSTELUT</h2>
+        <div class="reviews-container">
+            <div class="review-card animate">
+                <div class="review-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="review-text">"Halal-pizza oli mahtava — liha oli erinomaista ja täytteet laadukkaita. Chef Polash teki todella hyvää työtä, henkilökunta oli myös erittäin ystävällistä!"</p>
+                <p class="review-author">— Google-arvostelu</p>
+            </div>
+            <div class="review-card animate">
+                <div class="review-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="review-text">"Nopea toimitus ja pizza oli kuumaa perille asti. Tilaan täältä aina kun teen pizzatilauksen Vaasassa."</p>
+                <p class="review-author">— Foodora-arvostelu</p>
+            </div>
+            <div class="review-card animate">
+                <div class="review-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p class="review-text">"Hyvä hinta-laatu-suhde ja iso annoskoko. Suosittelen ehdottomasti Hietis Specialia!"</p>
+                <p class="review-author">— Foodora-arvostelu</p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer" id="yhteystiedot">
+        <img src="logoh.jpg" class="footer-logo">
+        <p class="footer-name">Hietalahdenpizzeria</p>
+        <div class="footer-divider"></div>
+        <div class="footer-info">
+            <div class="footer-row">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Tiilitehtaankatu 46, 65100 Vaasa</span>
+            </div>
+            <div class="footer-row">
+                <i class="fa-solid fa-phone"></i>
+                <span>044 9302665</span>
+            </div>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.facebook.com/hietalahdenpizzeria/?locale=fi_FI" target="_blank" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+        <p class="footer-copy">© 2025 Hietalahdenpizzeria. Kaikki oikeudet pidätetään.</p>
+    </footer>
+
+
+</body>
+</html>
